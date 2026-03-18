@@ -61,7 +61,7 @@ export default function Sidebar() {
       <div className="p-4 bg-zinc-900/30 border-t border-zinc-800">
         <div className="flex items-center gap-3">
           <Link
-            href="https://github.com"
+            href="https://github.com/barrerasaezgonzalo/devtools"
             target="_blank"
             className="flex items-center gap-3 px-3 py-2 text-sm text-zinc-500 hover:text-zinc-300 transition-colors"
           >
