@@ -1,21 +1,8 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
+import { tools } from "../lib/tools";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://devtools.cl"),
   title: {
     default: "devtools.cl — Herramientas Online para Desarrolladores",
     template: "%s | devtools.cl",
@@ -62,27 +49,33 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ToolsIndexPage() {
   return (
-    <html lang="es" suppressHydrationWarning className="dark">
-      <body
-        suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} bg-zinc-950 text-zinc-100 antialiased`}
-      >
-        <div className="flex min-h-screen">
-          <Sidebar />
-          <main className="flex-1 flex flex-col">
-            <div className="p-6 lg:p-12 w-full max-w-7xl mx-auto">
-              {children}
-            </div>
-            <Footer />
-          </main>
-        </div>
-      </body>
-    </html>
+    <main className="max-w-4xl mx-auto space-y-10">
+      <header className="space-y-4">
+        <h1 className="text-3xl font-bold text-zinc-100">
+          Herramientas online para desarrolladores
+        </h1>
+        <p className="text-zinc-500 text-sm leading-relaxed">
+          Explora nuestra colección de utilidades para desarrollo web. Todas las
+          herramientas funcionan directamente en tu navegador, sin enviar datos
+          a servidores externos.
+        </p>
+      </header>
+
+      <ul className="space-y-4">
+        {tools.map((tool) => (
+          <li key={tool.slug}>
+            <Link
+              href={`/tools/${tool.slug}`}
+              className="text-cyan-400 hover:underline font-medium"
+            >
+              {tool.name}
+            </Link>
+            <p className="text-zinc-500 text-sm">{tool.description}</p>
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }

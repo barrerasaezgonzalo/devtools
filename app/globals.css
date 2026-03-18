@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px; /* Scrollbar bien delgado */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Fondo invisible para que no ensucie el diseño */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: theme("colors.zinc.800"); /* Color sutil acorde a tu tema */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: theme(
+      "colors.cyan.500/50"
+    ); /* Se ilumina levemente al pasar el mouse */
+  }
+
+  /* Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.zinc.800") transparent;
+  }
+}
