@@ -5,13 +5,17 @@ import { usePathname } from "next/navigation";
 import { Tool } from "../types";
 import Link from "next/link";
 
-export default function Sidebar() {
+export default function Sidebar({ onClose }: { onClose?: () => void }) {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 border-r border-zinc-800 bg-zinc-950 flex flex-col h-screen sticky top-0">
+    <aside className="w-64 border-r border-zinc-800 bg-zinc-950 flex flex-col h-full">
       <div className="p-6">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link
+          onClick={onClose}
+          href="/"
+          className="flex items-center gap-2 group"
+        >
           <div className="w-8 h-8 text-xl bg-cyan-500 rounded-lg flex items-center justify-center font-bold text-black group-hover:bg-cyan-400 transition-colors">
             dt
           </div>
@@ -33,6 +37,7 @@ export default function Sidebar() {
 
               return (
                 <Link
+                  onClick={onClose}
                   key={tool.slug}
                   href={`/tools/${tool.slug}`}
                   className={`
