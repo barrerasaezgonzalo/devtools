@@ -19,3 +19,13 @@ export interface ToolStatus {
   type: "success" | "error";
   msg: string;
 }
+
+export type Post = {
+  slug: string;
+  title: string;
+  description: string;
+  content: string;
+  keywords: string[];
+  relatedTools: string[];
+  publishedAt: string;
+};

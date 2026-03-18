@@ -1,3 +1,4 @@
+import { posts } from "./lib/post";
 import { tools } from "./lib/tools";
 
 export default function sitemap() {
@@ -17,12 +18,22 @@ export default function sitemap() {
     lastModified: now,
   }));
 
+  const blogPages = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+  }));
+
   return [
     {
       url: baseUrl,
       lastModified: now,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: now,
+    },
     ...categoryPages,
     ...toolPages,
+    ...blogPages,
   ];
 }

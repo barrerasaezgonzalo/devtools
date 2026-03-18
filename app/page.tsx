@@ -1,6 +1,56 @@
 import Link from "next/link";
 import ToolCard from "./components/ToolCard";
 import { tools } from "./lib/tools";
+import { posts } from "./lib/post";
+
+export function HomeBlogSection() {
+  const latestPosts = posts.slice(0, 4);
+
+  return (
+    <section className="mt-20">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-xl md:text-2xl font-bold text-white">
+          Últimos artículos
+        </h2>
+
+        <Link href="/blog" className="text-sm text-cyan-400 hover:underline">
+          Ver todos →
+        </Link>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {latestPosts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group border border-zinc-800 rounded-xl p-5 hover:border-cyan-500/40 transition-all bg-zinc-900/40"
+          >
+            <article>
+              <h3 className="text-base font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                {post.title}
+              </h3>
+
+              <p className="text-sm text-zinc-400 mb-3 line-clamp-2">
+                {post.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {post.keywords.slice(0, 2).map((kw) => (
+                  <span
+                    key={kw}
+                    className="text-[10px] uppercase tracking-wider bg-zinc-800 text-zinc-400 px-2 py-1 rounded"
+                  >
+                    {kw}
+                  </span>
+                ))}
+              </div>
+            </article>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export default function HomePage() {
   const featuredTool = tools[0];
@@ -80,6 +130,8 @@ export default function HomePage() {
           ))}
         </ul>
       </section>
+
+      <HomeBlogSection />
 
       <section className="space-y-6">
         <div className="flex items-center justify-between">

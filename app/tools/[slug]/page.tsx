@@ -2,6 +2,7 @@ import { tools } from "@/app/lib/tools";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
+import { posts } from "@/app/lib/post";
 
 export async function generateMetadata({
   params,
@@ -53,6 +54,8 @@ export default async function ToolPage({
     const shuffled = [...filtered].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   }
+
+  const relatedPosts = posts.filter((post) => post.relatedTools.includes(slug));
 
   const relatedTools = getRandomTools(slug, 6);
   if (!tool) {
@@ -213,6 +216,31 @@ export default async function ToolPage({
                 ))}
               </ul>
             </section>
+
+            {relatedPosts.length > 0 && (
+              <section className="mt-4 border-t border-zinc-900 pt-10">
+                <h2 className="text-zinc-300 font-semibold mb-4 text-base">
+                  Aprende más sobre este tema
+                </h2>
+
+                <div className="grid gap-4">
+                  {relatedPosts.map((post) => (
+                    <Link
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="border border-zinc-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all bg-zinc-900/40"
+                    >
+                      <h3 className="text-white font-medium mb-1">
+                        {post.title}
+                      </h3>
+                      <p className="text-xs text-zinc-400">
+                        {post.description}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
           </>
         ) : (
           <div className="p-20 text-center border border-dashed border-zinc-800 rounded-xl text-zinc-500">
