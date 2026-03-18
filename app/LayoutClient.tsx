@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function LayoutClient({
   children,
@@ -48,6 +49,7 @@ export default function LayoutClient({
         </main>
 
         <Footer />
+        <ScrollToTop />
       </div>
     </div>
   );

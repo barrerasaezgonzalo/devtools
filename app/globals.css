@@ -27,25 +27,22 @@ body {
 
 @layer utilities {
   .custom-scrollbar::-webkit-scrollbar {
-    width: 5px; /* Scrollbar bien delgado */
+    width: 5px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent; /* Fondo invisible para que no ensucie el diseño */
+    background: transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: theme("colors.zinc.800"); /* Color sutil acorde a tu tema */
+    background: theme("colors.zinc.800");
     border-radius: 10px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: theme(
-      "colors.cyan.500/50"
-    ); /* Se ilumina levemente al pasar el mouse */
+    background: theme("colors.cyan.500/50");
   }
 
-  /* Firefox */
   .custom-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: theme("colors.zinc.800") transparent;
