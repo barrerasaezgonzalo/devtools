@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: Props) {
             {relatedTools.map((tool) => (
               <Link
                 key={tool.slug}
-                href={`/${tool.slug}`}
+                href={`/tools/${tool.slug}`}
                 className="border border-zinc-800 rounded-lg p-4 hover:border-cyan-500/40 transition-all bg-zinc-900/40"
               >
                 <h3 className="text-white font-medium mb-1">{tool.name}</h3>
