@@ -166,7 +166,7 @@ export default function HomePage() {
               Probar herramienta →
             </Link>
           </section>
-          <p className="text-xs text-zinc-500">Actualizado: {lastUpdated}</p>
+          <p className="text-xs text-zinc-400">Actualizado: {lastUpdated}</p>
         </div>
 
         <div className="lg:col-span-2 group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm hover:border-zinc-700 transition-all duration-300">
@@ -257,19 +257,19 @@ export default function HomePage() {
           Herramientas para desarrolladores rápidas y seguras
         </h2>
 
-        <p className="text-sm text-zinc-500 leading-relaxed">
+        <p className="text-sm text-zinc-300 leading-relaxed">
           En <span className="text-zinc-300 font-medium">devtools.cl</span>{" "}
           ofrecemos una colección de herramientas online pensadas para mejorar
           el flujo de trabajo de desarrolladores web, ingenieros de software y
           profesionales de tecnología.
         </p>
 
-        <p className="text-sm text-zinc-500 leading-relaxed">
+        <p className="text-sm text-zinc-300 leading-relaxed">
           Todas las utilidades funcionan{" "}
           <span className="text-zinc-300">directamente en tu navegador</span>.
         </p>
 
-        <p className="text-sm text-zinc-500 leading-relaxed">
+        <p className="text-sm text-zinc-300 leading-relaxed">
           Seguimos ampliando la colección para cubrir cada vez más necesidades
           del ecosistema de desarrollo web.
         </p>

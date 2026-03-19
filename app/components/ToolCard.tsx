@@ -29,7 +29,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
 
         <h3 className="font-semibold text-zinc-100  mb-1">{tool.name}</h3>
 
-        <p className="text-xs leading-relaxed text-zinc-500 group-hover:text-zinc-400 line-clamp-2">
+        <p className="text-xs leading-relaxed text-zinc-400 group-hover:text-zinc-400 line-clamp-2">
           {tool.description}
         </p>
       </div>
