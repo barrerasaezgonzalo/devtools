@@ -194,7 +194,29 @@ export default function JsonFormatter() {
           </div>
         </div>
       </div>
-
+      <p className=" text-zinc-500 text-sm leading-relaxed">
+        Este tipo de herramienta es especialmente útil cuando trabajas con APIs
+        REST, ya que muchas respuestas vienen en formato JSON minificado, lo que
+        dificulta su lectura. También es clave durante el debugging en
+        aplicaciones frontend y backend, donde necesitas inspeccionar
+        rápidamente estructuras de datos complejas. Al formatear el JSON, puedes
+        identificar errores de sintaxis, claves mal definidas o estructuras
+        inesperadas en segundos, ahorrando tiempo y evitando bugs en producción.
+      </p>
+      <section>
+        <h2 className="text-zinc-300 font-semibold mb-2 mt-4 text-base">
+          ¿Cuándo deberías usar un Formateador de JSON?
+        </h2>
+        <p className=" text-zinc-500 text-sm leading-relaxed">
+          Utilizar un JSON Formatter es recomendable en múltiples situaciones
+          del desarrollo. Por ejemplo, cuando recibes datos minificados desde
+          una API y necesitas hacerlos legibles, al depurar errores en
+          estructuras JSON complejas o antes de enviar datos a producción para
+          validar que su formato sea correcto. También es útil para entender
+          rápidamente la jerarquía de datos en integraciones externas o archivos
+          de configuración.
+        </p>
+      </section>
       <footer className="mt-auto pt-10 border-t border-zinc-900 pb-10">
         <div className="max-w-3xl space-y-8 text-zinc-500 text-sm leading-relaxed">
           <section>
@@ -228,9 +250,14 @@ export default function JsonFormatter() {
                 Compatibilidad Total
               </h3>
               <p className="text-xs">
-                Nuestra herramienta es compatible con el estándar RFC 8259,
-                permitiendo validar y limpiar objetos, arreglos y tipos de datos
-                complejos de JavaScript de manera instantánea.
+                Nuestra herramienta es compatible con el estándar RFC 8259, que
+                define la estructura y validación del formato JSON. Esto
+                significa que puedes trabajar con objetos, arreglos, strings,
+                números, booleanos y valores nulos sin problemas. Además, el
+                formateador detecta errores comunes como comas faltantes,
+                comillas mal cerradas o estructuras inválidas, ayudándote a
+                asegurar que tus datos cumplan con las especificaciones
+                correctas antes de utilizarlos en producción.
               </p>
             </div>
           </section>

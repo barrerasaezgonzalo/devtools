@@ -186,7 +186,53 @@ export default function JwtDebugger() {
           </div>
         </div>
       </div>
-
+      <p className="text-zinc-500 text-sm leading-relaxed">
+        Esta herramienta es especialmente útil cuando trabajas con autenticación
+        basada en tokens, ya que los JWT suelen venir en un formato compacto
+        difícil de leer. Al decodificarlos, puedes inspeccionar fácilmente el
+        header, payload y signature, lo que permite verificar información como
+        expiración, permisos o datos del usuario. Es ideal para debugging en
+        aplicaciones frontend y backend, integración con APIs seguras o análisis
+        rápido de tokens durante el desarrollo.
+      </p>
+      <section className="grid md:grid-cols-2 gap-8 mt-4">
+        <div>
+          <h3 className="text-zinc-300 font-medium mb-1 text-sm">
+            Privacidad y Seguridad
+          </h3>
+          <p className="text-sm text-zinc-500">
+            Todo el procesamiento se realiza localmente en tu navegador. Ningún
+            token es enviado a servidores externos, lo que garantiza que tu
+            información permanezca privada. Aun así, se recomienda no utilizar
+            tokens sensibles en entornos públicos o compartidos.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-zinc-300 font-medium mb-1 text-sm">
+            Estructura del JWT
+          </h3>
+          <p className="text-sm text-zinc-500">
+            Un JSON Web Token está compuesto por tres partes: header, payload y
+            signature. El header define el algoritmo, el payload contiene la
+            información (claims) y la signature asegura la integridad del token.
+            Nuestra herramienta permite visualizar cada sección de forma clara y
+            estructurada.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 className="text-zinc-300 font-semibold mb-2 text-base">
+          ¿Cuándo deberías usar un JWT Debugger?
+        </h2>
+        <p className="text-sm text-zinc-500">
+          Utilizar un JWT Debugger es fundamental cuando necesitas analizar
+          tokens generados por sistemas de autenticación, verificar fechas de
+          expiración o entender qué información está siendo transmitida entre
+          servicios. También es útil para detectar errores en la generación de
+          tokens, validar integraciones con APIs protegidas o simplemente
+          inspeccionar rápidamente el contenido de un JWT durante el desarrollo.
+        </p>
+      </section>
       <footer className="mt-auto pt-10 border-t border-zinc-900 pb-10">
         <div className="max-w-3xl space-y-8 text-zinc-500 text-sm leading-relaxed">
           <section>

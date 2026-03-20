@@ -155,6 +155,56 @@ export default function Base64Tool() {
         </div>
       </div>
 
+      <p className="text-zinc-500 text-sm">
+        Esta herramienta es especialmente útil cuando necesitas transformar
+        datos binarios o texto en un formato seguro para ser transmitido a
+        través de sistemas que solo aceptan texto. Base64 se utiliza comúnmente
+        en APIs, emails, almacenamiento de archivos y autenticación básica. Al
+        codificar o decodificar datos, puedes inspeccionar contenido, validar
+        información o preparar datos para su envío sin preocuparte por problemas
+        de compatibilidad.
+      </p>
+
+      <section className="grid md:grid-cols-2 gap-8 mt-4">
+        <div>
+          <h3 className="text-zinc-300 font-medium mb-1 text-sm">
+            Privacidad y Seguridad
+          </h3>
+          <p className="text-sm text-zinc-500">
+            Todo el procesamiento se realiza localmente en tu navegador. Ningún
+            dato es enviado a servidores externos, lo que garantiza que tu
+            información permanezca privada. Esto es especialmente importante
+            cuando trabajas con datos sensibles o credenciales codificadas en
+            Base64.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-zinc-300 font-medium mb-1 text-sm">
+            Compatibilidad
+          </h3>
+          <p className="text-sm text-zinc-500">
+            Base64 es un estándar ampliamente utilizado que permite representar
+            datos binarios en formato texto utilizando caracteres ASCII. Es
+            compatible con múltiples lenguajes y plataformas, lo que lo
+            convierte en una solución ideal para transferir datos entre sistemas
+            que no manejan correctamente contenido binario.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 className="text-zinc-300 font-semibold mb-1 text-base mt-4">
+          ¿Cuándo deberías usar un Encoder / Decoder Base64?
+        </h2>
+        <p className="text-sm text-zinc-500">
+          Base64 es útil cuando necesitas convertir datos binarios en texto para
+          su transporte o almacenamiento. Por ejemplo, al enviar archivos a
+          través de APIs, incrustar imágenes en HTML o manejar credenciales en
+          autenticación básica. También es una herramienta clave para debugging,
+          ya que permite decodificar rápidamente información y entender qué
+          datos están siendo procesados.
+        </p>
+      </section>
+
       <footer className="mt-auto pt-10 border-t border-zinc-900 pb-10">
         <div className="max-w-3xl space-y-8 text-zinc-500 text-sm leading-relaxed">
           <section>

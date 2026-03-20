@@ -156,6 +156,55 @@ export default function UrlEncoderDecoder() {
           </div>
         </div>
       </div>
+      <p className="text-zinc-500 text-sm">
+        Esta herramienta es especialmente útil cuando trabajas con parámetros en
+        URLs, ya que ciertos caracteres pueden causar errores si no están
+        correctamente codificados. El URL encoding permite transformar
+        caracteres especiales como espacios, símbolos o caracteres no ASCII en
+        un formato seguro para su transmisión en la web. Es clave al construir
+        queries para APIs, manejar formularios o compartir enlaces que contienen
+        datos dinámicos.
+      </p>
+
+      <section className="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-zinc-300 font-medium mb-1 text-sm">
+            Privacidad y Seguridad
+          </h3>
+          <p className="text-xs">
+            Todo el procesamiento se realiza localmente en tu navegador. Ningún
+            dato es enviado a servidores externos, lo que garantiza que la
+            información contenida en tus URLs permanezca privada y segura en
+            todo momento.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-zinc-300 font-medium mb-1 text-sm">
+            Compatibilidad
+          </h3>
+          <p className="text-xs">
+            El encoding de URLs sigue el estándar definido por RFC 3986, que
+            establece cómo deben representarse los caracteres en una dirección
+            web. Esto asegura compatibilidad con navegadores, servidores y APIs
+            modernas, permitiendo que los datos sean interpretados correctamente
+            en cualquier entorno.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-zinc-300 font-semibold mb-2 text-base">
+          ¿Cuándo deberías usar un URL Encoder / Decoder?
+        </h2>
+        <p className="text-zinc-500 text-sm">
+          El URL encoding es necesario cuando trabajas con parámetros que
+          incluyen espacios, símbolos especiales o caracteres fuera del estándar
+          ASCII. Es especialmente útil al construir URLs dinámicas, enviar datos
+          en formularios, integrar APIs o depurar problemas relacionados con
+          parámetros mal interpretados. También permite decodificar fácilmente
+          URLs para entender qué información contienen realmente.
+        </p>
+      </section>
 
       <footer className="mt-auto pt-10 border-t border-zinc-900 pb-10">
         <div className="max-w-3xl space-y-8 text-zinc-500 text-sm leading-relaxed">
